@@ -1,0 +1,7 @@
+.idea
+
+*.ex5
+*.ex4
+
+.DS_Store
+Thumbs.db
