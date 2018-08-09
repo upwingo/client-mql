@@ -16,7 +16,7 @@ void OnStart()
 
     string currency = "FREE";
 
-    JSON *balances = upwingo.getBalance();
+    JSON balances = upwingo.getBalance();
     if ( upwingo.getLastError() != NULL ) {
         Print(upwingo.getLastError());
     } else {
@@ -29,7 +29,7 @@ void OnStart()
     order["currency"]   = currency;
     order["type"]       = -1;
 
-    JSON *r = upwingo.orderCreate(order);
+    JSON r = upwingo.orderCreate(order);
     if ( upwingo.getLastError() != NULL ) {
         Print(upwingo.getLastError());
     } else {
